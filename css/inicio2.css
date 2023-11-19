@@ -1,0 +1,308 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:"header header header"
+                        "carousel carousel carousel"
+                        "contenedor contenedor contenedor"
+                        "imagenes imagenes imagenes"
+                        "publicidad publicidad publicidad"
+                        "banner banner banner"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.navbar-collapse{
+    z-index: 1000;
+}
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: auto;
+    min-width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.carousel{
+    grid-area: carousel;
+}
+
+.contenedor{
+    grid-area: contenedor;
+    margin: 50px;
+    
+}
+
+.contenedor-body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card{
+    margin: 15px;
+    width: 300px;
+}
+.imagenes{
+    grid-area: imagenes;
+    height: 500px;
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img1,
+.img2,
+.img3{
+    margin: 10px;
+}
+.img1 img{
+    width: 100%;
+    height: 300px;
+    
+}
+.img2 img{
+    width: 100%;
+    height: 300px;
+}
+.img4 img{
+    width: 100%;
+    height: 300px;
+}
+.img3 img{
+    width: 100%;
+    height: 300px;
+}
+
+.publicidad{
+    grid-area: publicidad;
+    height: auto;
+    margin: 70px 0px 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.publicidad img{
+    width: 300px;
+    height: 500px;
+}
+.publicidad img:hover{
+    -webkit-transform: scale(1.2);
+    transition: 1s;
+}
+.banner{
+    grid-area: banner;
+    height: 200px;
+    background-image: url(../img/cafe4.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.baner{
+    height: auto;
+    width: 90%;
+    background: rgb(67,39,25);
+    display: flex;
+    flex-wrap: wrap;
+}
+.baner a{
+    margin: 20px;
+    width: 20%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.idea .circulo{
+    border: 1px solid white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.idea p{
+    margin: 10px;
+    display: flex;
+}
+
+@media screen and (max-width:1100px){
+    .card{
+        width: 150px;
+    }
+    .img1 img{
+        width: 100%;
+        height: 150px;
+        margin: 10px;
+    }
+    .img2 img{
+        width: 100%;
+        height: 150px;
+    }
+    .img4 img{
+        width: 100%;
+        height: 150px;
+    }
+    .img3 img{
+        width: 100%;
+        height: 150px;
+    }
+
+    .publicidad img{
+        width: 150px;
+        height: 300px;
+    }
+    .banner{
+        height: auto;
+    }
+    .baner{
+        width: 80%;
+    }
+    .baner a{  
+        width: 40%;  
+    }
+}
+@media screen and (max-width:800px){
+    .card{
+        width: 150px;
+    }
+    
+    .img1 img{
+        width: 100%;
+        height: 150px;
+        margin: 10px;
+    }
+    .img2 img{
+        width: 100%;
+        height: 150px;
+    }
+    .img4 img{
+        width: 100%;
+        height: 150px;
+    }
+    .img3 img{
+        width: 100%;
+        height: 150px;
+    }
+    .publicidad img{
+        width: 150px;
+        height: 300px;
+    }
+    .banner{
+        height: auto;
+    }
+    .baner{
+        width: 80%;
+    }
+    .baner a{
+        width: 40%;
+    }
+}
+@media screen and (max-width:550px){
+    
+    .img1 img{
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+    }
+    .img2 img{
+        width: 100px;
+        height: 100px;
+    }
+    .img4 img{
+        width: 100px;
+        height: 100px;
+    }
+    .img3 img{
+        width: 100%;
+        height: 100px;
+    }
+    .imagenes{
+        margin: 50px;
+        height: 350px;
+    }
+    .img1,
+    .img2,
+    .img3{
+        margin: 2px;
+    }
+    .publicidad img{
+        width: 75px;
+        height: 150px;
+    }
+    .banner{
+        height: auto;
+    }
+    .baner{
+        width: 80%;
+    }
+    .baner a{
+        width: 30%;
+        height: 50px;
+    }
+    .idea .circulo{
+        width: 30px;
+        height: 30px;
+    }
+    .idea p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:400px){
+    
+    .img1 img{
+        width: 80px;
+        height: 80px;
+        margin: 1px;
+    }
+    .img2 img{
+        width: 80px;
+        height: 80px;
+    }
+    .img4 img{
+        width: 80px;
+        height: 80px;
+    }
+    .img3 img{
+        width: 100%;
+        height: 100px;
+    }
+    .imagenes{
+        margin: 20px;
+        height: 250px;
+    }
+    .img1,
+    .img2,
+    .img3{
+        margin: 2px;
+    }
+    .publicidad img{
+        width: 75px;
+        height: 150px;
+    }
+    .idea .circulo{
+        width: 25px;
+        height: 25px;
+    }
+    .idea p{
+        font-size: 5px;
+    }
+}

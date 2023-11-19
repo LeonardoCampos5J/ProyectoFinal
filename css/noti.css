@@ -1,0 +1,165 @@
+body{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,auto);
+
+    grid-template-areas: "header header header"
+                        "detalles detalles detalles"
+                        "footer footer footer"
+                        ; 
+}
+.header{
+    grid-area: header;
+}
+.navbar-collapse{
+    z-index: 1000;
+}
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.mensajes{
+    grid-area: mensajes;
+}
+.detalles{
+    grid-area: detalles;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detalle{
+    width: 100%;
+    margin: 40px 0px;
+    
+}
+.noticias{
+    width: 20%;
+    background-color: brown;
+    border-radius: 10px;
+    color: white;
+}
+.marketing{
+    width: 60%;
+}
+.informacion{
+    background-color: rgb(105, 31, 31);
+    height: 200px;
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,auto);
+
+    grid-template-areas: "comunidad preguntas ayuda"; 
+
+    justify-content: center;
+    align-items: center;
+    
+}
+.comunidad{
+    grid-area: comunidad;
+    height: 150px;
+    width: 90%;
+    
+    border-right: 1px solid black;
+}
+.comunidad a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.preguntas{
+    grid-area: preguntas;
+    height: 150px;
+    width: 90%;
+    
+    border-right: 1px solid black;
+}
+.preguntas a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.ayuda{
+    grid-area: ayuda;
+    height: 150px;
+    width: 90%;
+    
+}
+.ayuda a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.detalle a{
+    text-decoration: none;
+    color: brown;
+}
+.detalle img{
+    width: 50%;
+}
+
+#formGroupExampleInput4{
+    height: 100px;
+}
+
+.footer{
+    grid-area: footer;
+    background-image: url(../img/footer.png);
+    height: 200px;
+}
+
+
+
+@media screen and (max-width:760px){
+    body{
+        grid-template-areas: "header header header"
+                            "detalles detalles detalles"
+                            "footer footer footer";
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    .detalle img{
+        width: 40%;
+    }
+    .detalle h3{
+        font-size: 10px;
+    }
+    .comunidad a H1,
+    .preguntas a H1,
+    .ayuda a H1{
+        font-size: 10px;
+    }
+    .noticias{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:950px){
+    body{
+        grid-template-areas: "header header header"
+                            "detalles detalles detalles"
+                            "mensajes mensajes mensajes"
+                            "footer footer footer"
+                            ;
+    }
+    .mensaje{
+        margin: 50px;
+    }
+}

@@ -1,0 +1,208 @@
+body{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,auto);
+
+    grid-template-areas: "header header header"
+                        "detalles detalles detalles"
+                        "mensajes mensajes mensajes"
+                        "footer footer footer" 
+                        ; 
+}
+.header{
+    grid-area: header;
+}
+.navbar-collapse{
+    z-index: 1000;
+}
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: auto;
+    min-width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.mensajes{
+    grid-area: mensajes;
+}
+.detalles{
+    grid-area: detalles;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detalle{
+    width: 100%;
+    margin: 40px 0px;
+    
+}
+.noticias{
+    width: 40%;
+    border-radius: 10px;
+    color: white;
+    background: brown;
+}
+.mn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mision{
+    height: 150px; 
+    margin: 20px;
+}
+.vision{
+    height: 150px;
+    margin: 20px;
+}
+.mision h4 p{
+    margin: 30px;
+}
+.mision:hover,
+.vision:hover{
+    background: rgb(182, 77, 77);
+    transition: 1s;
+}
+
+.marketing{
+    width: 50%;
+}
+.nosotros{
+    width: 40%;
+    height: 300px;
+    margin: 20px;
+}
+.informacion{
+    background-color: rgb(105, 31, 31);
+    height: 200px;
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,auto);
+
+    grid-template-areas: "comunidad preguntas ayuda"; 
+
+    justify-content: center;
+    align-items: center;
+    
+}
+.comunidad:hover{
+    background-color: rgb(67,39,25);
+    transition: 1s;
+}
+.preguntas:hover{
+    background-color: rgb(67,39,25);
+    transition: 1s;
+}
+.ayuda:hover{
+    background-color: rgb(67,39,25);
+    transition: 1s;
+}
+.comunidad{
+    grid-area: comunidad;
+    height: 150px;
+    width: 90%;
+    border-right: 1px solid black;
+}
+.comunidad a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.preguntas{
+    grid-area: preguntas;
+    height: 150px;
+    width: 90%;
+    
+    border-right: 1px solid black;
+}
+.preguntas a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.ayuda{
+    grid-area: ayuda;
+    height: 150px;
+    width: 90%;
+    
+}
+.ayuda a H1{
+    margin-top: 40px;
+    color: white;
+    
+}
+.detalle a{
+    text-decoration: none;
+    color: brown;
+}
+.mensaje{
+    width: 70%;
+    float: left;
+    margin: 80px;
+}
+#formGroupExampleInput4{
+    height: 100px;
+}
+.banner{
+    grid-area: banner;
+
+}
+.footer{
+    grid-area: footer;
+    background-image: url(../img/footer.png);
+    height: 200px;
+}
+
+
+
+@media screen and (max-width:760px){
+    body{
+        grid-template-areas: "header header header"
+                            "detalles detalles detalles"
+                            "mensajes mensajes mensajes"
+                            "footer footer footer";
+    }
+    
+    .mensaje{
+        margin: 50px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .mn{
+        display: block;
+    }
+    .marketing{
+        width: 100%;
+    }
+    .nosotros{
+        width: 90%;
+        
+    }
+    h3{
+        font-size: 10px;
+    }
+    .noticias{
+        width: 50%;
+    }
+    .comunidad a H1,
+    .preguntas a H1,
+    .ayuda a H1{
+        font-size: 10px;
+    }
+    
+}
